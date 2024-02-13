@@ -1,3 +1,39 @@
+Weather App
+A simple React.js weather application that fetches real-time weather data from the OpenWeatherMap API. The app displays current weather details and a weekly forecast for a specified location. It features a responsive design, allowing users to view weather information on various devices.
+
+Features
+Display current weather information including temperature, humidity, and description.
+Show a weekly forecast with temperature and weather conditions for each day.
+Responsive design for seamless user experience across different devices.
+Technologies Used
+React.js
+OpenWeatherMap API
+Axios for fetching data
+React Bootstrap for UI components
+Framer Motion for animations
+Setup
+Clone the repository.
+Install dependencies using npm install.
+Obtain an API key from OpenWeatherMap.
+Create a .env file in the project root directory.
+Add your API key to the .env file: REACT_APP_API_KEY=your_api_key.
+Run the app using npm start.
+Contributing
+Contributions are welcome! Feel free to submit issues or pull requests.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
+
+
+
+
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
