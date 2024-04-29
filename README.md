@@ -1,6 +1,6 @@
 # Weather App
 
-**A simple React.js weather application** that fetches real-time weather data from the OpenWeatherMap API. The app displays current weather details and a weekly forecast for a specified location. It features a responsive design, allowing users to view weather information on various devices.
+**A React.js weather application** that fetches real-time weather data from the OpenWeatherMap API. The app displays current weather details and a weekly forecast for a specified location. It features a responsive design, allowing users to view weather information on various devices.
 
 ## Features
 
