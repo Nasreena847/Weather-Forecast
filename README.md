@@ -4,6 +4,7 @@
 
 ![home-page](https://github.com/Nasreena847/Weather-Forecast/blob/main/src/images/Screenshot%20(52).png)
 ![](https://github.com/Nasreena847/Weather-Forecast/blob/main/src/images/Screenshot%20(53).png)
+![](https://github.com/Nasreena847/Weather-Forecast/blob/main/src/images/Screenshot%20(54).png)
 
 ## Features
 
