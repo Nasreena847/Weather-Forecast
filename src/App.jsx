@@ -22,6 +22,7 @@ function App() {
   const [show, setShow] = useState(!permissionDenied);
   const [loading, setLoading] = useState(false);
 
+  // Asks the User for permission to access their current location
 
   const handleAllowLocation = () => {
     setPermissionDenied(false);
@@ -38,6 +39,8 @@ function App() {
       setShow(false); 
     };
 
+  //  If User allows getting the current location of the user
+  
   const askForLocationPermission  = () => {
     setLoading(true);
     if (navigator.geolocation) {
@@ -59,6 +62,8 @@ function App() {
       
     }
   };
+
+  // After getting the Longitude and Latitude we send the data to the api and get the city name, city region and country
 
   const fetchLocationByCoordinates = async (lat, lon) => {
     try {
@@ -86,8 +91,15 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetchData();
+    if (location.trim()) {
+      setLoading(true);
+      // Fetch location data here (e.g., API call)
+      handleFetchData();
+      fetchData();
+    }
   };
+
+  // fetching the location data
 
   const fetchData = async () => {
     setLoading(true);
@@ -116,7 +128,10 @@ function App() {
 
   const handleFetchData = async () => {
     setLoading(true);
-    await fetchData();
+    console.log('Fetching data', location.trim());
+    if (location.trim()) {
+      await fetchData();
+    }
     setLoading(false);
   };
  

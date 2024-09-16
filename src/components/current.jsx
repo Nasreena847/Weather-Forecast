@@ -44,7 +44,9 @@ export default function Weather({WeeklyData, city, state, village,country, rever
           return <img src={humidityPercentage} alt="High Humidity" />;
         }
       };
-    
+  
+  // This give Current weather data for the location it does not matter if its current location or the user has typed the location
+  
 const RenderCurrentWeather = () => {
     const CurrentData = () => {
       if (!current || !current.weather || !current.weather[0]) return null;
@@ -87,6 +89,7 @@ const RenderCurrentWeather = () => {
       return <CurrentData />;
     };
   
+  // This when the user selects a specific day and displays the hourly data
     
 const RenderSelectedDayDetails = () => {
     const [isExpanded, setIsExpanded] = useState(false);

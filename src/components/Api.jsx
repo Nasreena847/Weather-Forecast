@@ -23,7 +23,9 @@ export default function ApiCall({latitude, longitude, city, country, state, vill
     const [dailyData, setDailyData] = useState([]);
     const [selectedDay, setSelectedDay] = useState('');
     const [lastFetchTime, setLastFetchTime] = useState(null);
-    const [AlertOpen, setAlertOpen] = useState(true)
+  const [AlertOpen, setAlertOpen] = useState(true);
+
+  // fetching data from the openweather api endpoint for both current and Weely data
 
     const fetchData = async() => {
   try{
@@ -69,7 +71,9 @@ useEffect(() => {
    
         fetchData();
       
-  }, [latitude, longitude]);
+}, [latitude, longitude]);
+  
+// This handles if the user clicks on a day for weekly data
 
   const handleDayClick = (day) => {
     console.log('Selected day:', day);
@@ -98,11 +102,10 @@ const renderWeeklyWeather = () => {
     };
   }, []);
 
+// This is for Temperature icons
 
   const WeeklyData = ({ weeklyData, selectedDay, handleDayClick }) => {
     if (!weeklyData) return null;
-  
-  console.log('rendering weekly data') 
   if (!data || !data.weekly || !data.weekly.data) return null;
 
   const temperatureIcon = (temp) => { 
@@ -125,7 +128,8 @@ const renderWeeklyWeather = () => {
 
  return ( 
     <>
-  {data?.weekly?.selectedDay ? (
+     {data?.weekly?.selectedDay ? (
+       // If the user selected a day then this will display
     <div className="selected-container">
     <Grid>
     <h2 className="weekly-h1">Weekly Data</h2>
@@ -154,7 +158,8 @@ const renderWeeklyWeather = () => {
       </Grid>
     </div>
  ) : (
-  <>
+         <>
+           {/* If selected day and weekly data is not available this will display like you see in the first page */}
    <h2 style={{textAlign: 'center', color: '#edf2f4'}}>Weekly Data</h2>
   {alert()}
     <div className='container'>
@@ -188,6 +193,8 @@ const renderWeeklyWeather = () => {
 return <WeeklyData weeklyData={data.weekly.data} selectedDay={selectedDay} handleDayClick={handleDayClick} />;
 };
 
+  // This Alert actually tells the user that the weekly data is clickable and if they click they can view the specific day data
+  
 const alert = () => {
   
   const handleAlertClose = () => {
