@@ -2,6 +2,10 @@
 
 **A React.js weather application** that fetches real-time weather data from the OpenWeatherMap API. The app displays current weather details and a weekly forecast for a specified location. It features a responsive design, allowing users to view weather information on various devices.
 
+![home-page](https://github.com/Nasreena847/Weather-Forecast/blob/main/src/images/Screenshot%20(52).png)
+![](https://github.com/Nasreena847/Weather-Forecast/blob/main/src/images/Screenshot%20(53).png)
+![](https://github.com/Nasreena847/Weather-Forecast/blob/main/src/images/Screenshot%20(54).png)
+
 ## Features
 
 - Display current weather information including temperature, humidity, and description.
